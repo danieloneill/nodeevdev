@@ -6,7 +6,7 @@ Basic libevdev binding for node.js
 ```javascript
 #!/usr/bin/env node
 
-var Evdev = require('evdev');
+var Evdev = require('nodeevdev');
 
 var dev = Evdev.create();
 dev.open( '/dev/input/event1', function(obj, err) {
@@ -42,7 +42,7 @@ console.log("Listening for keyboard input...");
 
 ## evdev object
 
-### evdevObject::open( path, callback( edvevObject, error ) )
+### evdevObject::open( path, callback( evdevObject, error ) )
 `Open an evdev device, associate it to this object, and fire the provided callback upon completion.`
 
 The parameters passed to the provided callback function are **evdevObject** which is a reference to the evdev object, and **error** which will be an error string in the case of an error, or undefined on success.

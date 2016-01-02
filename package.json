@@ -1,6 +1,6 @@
 {
   "name": "nodeevdev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A libevdev interface for Node.js",
   "author": {
     "name": "Daniel O'Neill",

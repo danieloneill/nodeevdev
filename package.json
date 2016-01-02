@@ -1,0 +1,31 @@
+{
+  "name": "nodeevdev",
+  "version": "1.0.0",
+  "description": "A libevdev interface for Node.js",
+  "author": {
+    "name": "Daniel O'Neill",
+    "email": "doneill@akielectronics.com",
+    "url": "http://akielectronics.com"
+  },
+  "keywords": [
+    "evdev",
+    "nodeevdev"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danieloneill/nodeevdev.git"
+  },
+  "scripts": {
+    "preinstall": "(pkg-config libevdev --exists) || (echo Sorry, you need to install libevdev2 and development headers libevdev-dev to build this module.; exit 1)",
+    "install": "(node-gyp rebuild 2> builderror.log) || (exit 1)"
+  },
+  "engines": {
+    "node": ">=0.11.13"
+  },
+  "gypfile": true,
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/danieloneill/nodeevdev/issues"
+  },
+  "homepage": "https://github.com/danieloneill/nodeevdev"
+}
